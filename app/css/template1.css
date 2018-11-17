@@ -1,0 +1,133 @@
+.section1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 100vh;
+  background: url(../img/site1/bg1.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+          background-size: cover;
+  z-index: 100;
+}
+
+.section1 .mask {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: url(../img/site1/mask1.png) no-repeat center center;
+  -webkit-background-size: cover;
+          background-size: cover;
+  z-index: -1;
+}
+
+.section1_head {
+  position: relative;
+  height: 100px;
+  width: 100%;
+  line-height: 100px;
+  border-bottom: 2px solid #5f868e;
+}
+
+.section1_head .logo {
+  float: left;
+}
+
+.section1_head .logo a {
+  color: #fff;
+  display: block;
+}
+
+.section1_head .links {
+  float: left;
+  margin-left: 200px;
+}
+
+.section1_head .links ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.section1_head .links ul li a {
+  display: block;
+  color: #fff;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+  position: relative;
+}
+
+.section1_head .links ul li a::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  display: block;
+  background-color: #ffeb3b;
+  height: 3px;
+  bottom: 0;
+  left: 0;
+  -webkit-transition: all .3s ease;
+  -o-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.section1_head .links ul li a:hover {
+  color: #ffeb3b;
+}
+
+.section1_head .links ul li a:hover::before {
+  width: 100%;
+}
+
+.section1_head .input_wrapper {
+  float: right;
+  position: relative;
+}
+
+.section1_head .input_wrapper input {
+  background-color: transparent;
+  border: none;
+  height: 30px;
+  color: #fff;
+  padding-right: 30px;
+  width: 140px;
+  font-size: 18px;
+}
+
+.section1_head .input_wrapper input:focus {
+  border: none;
+  outline: none;
+}
+
+.section1_head .input_wrapper::before {
+  content: "\f002";
+  position: absolute;
+  color: rgba(250, 250, 250, 0.8);
+  top: 0;
+  right: 0;
+  font-size: 24px;
+  font-weight: 100;
+  font-family: "FontAwesome";
+}
+
+.section1 .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 84px;
+}
+
+#toggle {
+  display: none;
+}
+
+#bars {
+  cursor: pointer;
+  float: left;
+  display: none;
+}
