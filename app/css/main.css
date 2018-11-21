@@ -29,6 +29,10 @@
 
 @import url(../libs/font-awesome-4.7.0/css/font-awesome.min.css);
 
+@import url(../libs/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css);
+
+@import url(../libs/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css);
+
 html {
   font-family: sans-serif;
   /* 1 */
@@ -492,6 +496,7 @@ body {
   font-family: 'Roboto', sans-serif;
   overflow-x: hidden;
   font-weight: 400;
+  position: relative;
 }
 
 a {
@@ -510,6 +515,11 @@ ul {
   padding: 0;
   margin: 0;
   list-style-type: none;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 /*==========  Desktop First  ==========*/
@@ -567,15 +577,47 @@ ul {
 }
 
 @media only screen and (max-width: 768px) {
-  /**/
+  .section1-text {
+    padding-top: 100px;
+    text-align: center;
+    font-family: 'Arizonia', cursive;
+    font-weight: 800;
+  }
+
+  .section1-text-one {
+    color: #fff;
+    font-size: 60px;
+  }
+
+  .section1-text-two {
+    color: #fff;
+    font-size: 80px;
+  }
 }
 
 @media only screen and (max-width: 530px) {
-  /**/
+  .section1-text {
+    padding-top: 100px;
+    text-align: center;
+    font-family: 'Arizonia', cursive;
+    font-weight: 800;
+  }
+
+  .section1-text-one {
+    color: #fff;
+    font-size: 50px;
+  }
+
+  .section1-text-two {
+    color: #fff;
+    font-size: 70px;
+  }
 }
 
 @media only screen and (max-width: 480px) {
-  /**/
+  .header-logo-text {
+    font-size: 18px;
+  }
 }
 
 @media only screen and (max-width: 320px) {

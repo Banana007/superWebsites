@@ -1,3 +1,10 @@
+@import "part"
+@import "normalize"
+@import "libs"
+@import "vars"
+@import "fonts"
+
+// SECTION1 BEGIN
 .section1
     position: relative
     width: 100%
@@ -16,78 +23,209 @@
         background: url(../img/site1/mask1.png) no-repeat center center
         background-size: cover
         z-index: -1
-    &_head
-        position: relative
-        height: 100px
+    &-text
+        padding-top: 100px
+        text-align: center
+        font-family: 'Arizonia', cursive
+        font-weight: 800
+        &-one
+            color: #fff
+            font-size: 130px
+        &-two
+            color: #fff
+            font-size: 160px
+.header
+    width: 100%
+    padding-top: 60px
+    line-height: 80px
+    position: relative
+    &::before
+        content: ""
+        position: absolute
         width: 100%
-        line-height: 100px
-        border-bottom: 2px solid #5f868e
-        .logo
-            float: left
-            a
-                color: #fff
-                display: block
-        .links
-            float: left
-            margin-left: 200px
-            ul
-                li
-                    display: inline-block
-                    margin-right: 20px
-                    a
-                        display: block
-                        color: #fff
-                        transition: all .3s ease
-                        position: relative
-                        &::before
+        bottom: 0
+        left: 0
+        height: 2px
+        background-color: #c1c1c1
+    &-logo
+        position: relative
+        bottom: 4px
+        display: block
+        color: #fff
+        &:hover
+            text-decoration: none
+        &-img
+            display: inline-block
+            width: 30px
+        &-text
+            display: inline-block
+            position: relative
+            font-size: 20px
+            &::before
+                content: "Template"
+                position: absolute
+                top: 22px
+                right: 0
+                font-size: 14px
+    &-list
+        ul
+            text-align: right
+            li
+                display: inline-block
+                a
+                    display: block
+                    color: #fff
+                    transition: all .2s ease
+                    position: relative
+                    &::before
                             content: ""
                             position: absolute
                             width: 0
-                            display: block
-                            background-color: #ffeb3b
-                            height: 3px
-                            bottom: 0
+                            transition: all .2s ease
+                    &:hover
+                        color: $gold
+                        text-decoration: none
+                        &::before
+                            content: ""
+                            position: absolute
+                            width: 100%
+                            height: 100%
+                            bottom: -16px
                             left: 0
-                            transition: all .3s ease
-                        &:hover
-                            color: #ffeb3b
-                            &::before
-                                width: 100%
-        .input_wrapper
-            float: right
-            position: relative
-            input   
-                background-color: transparent
-                border: none
-                height: 30px
-                color: #fff
-                padding-right: 30px
-                width: 140px
-                font-size: 18px
-                &:focus
-                    border: none
-                    outline: none
-            &::before
-                content: "\f002"
-                position: absolute
-                color: rgba(250, 250, 250, .8)
-                top: 0
-                right: 0
-                font-size: 24px
-                font-weight: 100
-                font-family: "FontAwesome"
-    .title
-        position: absolute
-        top: 50%
-        left: 50%
-        transform: translate(-50%, -50%)   
-        color: #fff
-        font-size: 84px
-    
-#toggle
-    display: none
+                            height: 2px
+                            background-color: $gold
+            li:not(:last-child)
+                padding-right: 10px
+    &-search
+        position: relative
+        input
+            background-color: rgba(0,0,0,.4)
+            border: none
+            outline: none
+            border-radius: 100px
+            padding-left: 12px
+            height: 28px
+            color: #fff
+            width: 180px
+            padding-right: 36px
+        &::before
+            content: "\f002"
+            position: absolute
+            font-family: "FontAwesome"
+            top: 0
+            right: 0
+            left: 0
+            bottom: 0
+            margin-left: 150px
+            color: #fff
+            font-size: 18px
+    &-toggle
+        text-align: right
+        position: relative
+        top: 2px
+        .fa
+            font-size: 26px
+            cursor: pointer
+            color: #fff
 
-#bars
-    cursor: pointer
-    float: left
-    display: none
+.header-list2
+    content: ""
+    position: absolute
+    width: 100%
+    height: 68%
+    background: rgba(0,0,0,.8)
+    z-index: 20
+    left: 0
+    right: 0
+    bottom: 0
+    top: 141px
+    ul
+        display: flex
+        flex-direction: column
+        justify-content: space-around
+        align-items: flex-center
+        width: 100%
+        height: 100%
+        margin: 0
+        padding: 0
+        li:last-child
+            border-bottom: none
+        li
+            width: 100%
+            border-bottom: 1px solid #fff
+            a
+                color: #fff
+                display: block
+                text-align: center
+                &:hover
+                    text-decoration: none
+// SECTION1 END
+
+// SECTION2 BEGIN
+.section2
+    margin-top: 130px
+    &-title
+        font-size: 34px
+        font-family: 'Vidaloka', serif
+        font-weight: 600
+        span
+            text-decoration: underline
+            color: $gold
+    &-cards
+        margin-top: 130px
+        margin-bottom: 150px
+        .card
+            border: none 
+            border-radius: 0
+            &-img
+                position: relative
+                &::before
+                    content: ""
+                    position: absolute
+                    width: 1px
+                    height: 80%
+                    top: 10px
+                    right: 30px
+                    background-color: #c1c1c1
+            &-title
+                font-size: 18px
+                font-weight: bold
+                color: rgb(49, 49, 49)
+            &-descr
+                padding-top: 18px
+                font-size: 18px
+                color: rgb(49, 49, 49)
+// SECTION2 END
+
+
+// SECTION7 BEGIN
+.section7
+    position: relative
+    width: 100%
+    min-height: 600px
+    background: url(../img/site1/sec3bg.jpg) no-repeat center center
+    background-size: cover
+    &-title
+        padding-top: 130px
+        font-family: 'Vidaloka', serif
+        font-size: 36px
+        color: rgb(255, 255, 255)
+    &-descr
+        padding-top: 46px
+        color: rgb(255, 255, 255)
+        font-size: 16px
+    &-img
+        width: 160px
+        max-width: 160px
+// SECTION7 END
+
+// SECTION3 BEGIN
+// SECTION3 END
+
+// SECTION3 BEGIN
+// SECTION3 END
+
+// SECTION3 BEGIN
+// SECTION3 END
+        
+@import "media"
